@@ -1,0 +1,63 @@
+<svg viewBox="0 0 1100 560" xmlns="http://www.w3.org/2000/svg" font-family="Verdana, Arial, sans-serif">
+  <defs>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+    <marker id="arw" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L7,3.5 L0,7 Z" fill="#545B64"/>
+    </marker>
+  </defs>
+  <rect width="1100" height="560" fill="#ffffff"/>
+  <text x="30" y="34" font-size="18" font-weight="bold" fill="#232F3E">Hybrid Connectivity — Transit Gateway + Site-to-Site VPN</text>
+  <line x1="30" y1="44" x2="1070" y2="44" stroke="#D5DBDB"/>
+
+  <rect x="40" y="220" width="170" height="90" rx="4" fill="#F2F3F3" stroke="#545B64"/>
+  <text x="50" y="238" font-size="9" fill="#545B64">On-Premises DC</text>
+  <g filter="url(#sh)"><rect x="60" y="250" width="55" height="45" rx="8" fill="#545B64"/></g>
+  <text x="87" y="277" text-anchor="middle" font-size="7" fill="white" font-weight="bold">VPN GW</text>
+
+  <g filter="url(#sh)"><rect x="270" y="248" width="55" height="55" rx="8" fill="#DD344C"/></g>
+  <text x="297" y="272" text-anchor="middle" font-size="7" fill="white" font-weight="bold">Site-to-</text>
+  <text x="297" y="282" text-anchor="middle" font-size="7" fill="white" font-weight="bold">Site VPN</text>
+  <text x="297" y="325" text-anchor="middle" font-size="10" fill="#232F3E">BGP tunnel</text>
+  <polyline points="210,265 270,275" stroke="#545B64" stroke-width="1.5" marker-end="url(#arw)" fill="none"/>
+
+  <g filter="url(#sh)"><rect x="420" y="240" width="70" height="70" rx="8" fill="#232F3E"/></g>
+  <text x="455" y="270" text-anchor="middle" font-size="8" fill="white" font-weight="bold">Transit</text>
+  <text x="455" y="282" text-anchor="middle" font-size="8" fill="white" font-weight="bold">Gateway</text>
+  <text x="455" y="335" text-anchor="middle" font-size="10" fill="#232F3E">Hub &amp; spoke routing</text>
+  <polyline points="325,275 420,275" stroke="#545B64" stroke-width="1.5" marker-end="url(#arw)" fill="none"/>
+
+  <g filter="url(#sh)"><rect x="620" y="80" width="55" height="55" rx="8" fill="#ED7100"/></g>
+  <text x="647" y="112" text-anchor="middle" font-size="9" fill="white" font-weight="bold">VPC</text>
+  <text x="647" y="152" text-anchor="middle" font-size="10" fill="#232F3E">Dev</text>
+  <polyline points="490,255 620,108" stroke="#545B64" stroke-width="1.5" marker-end="url(#arw)" fill="none"/>
+
+  <g filter="url(#sh)"><rect x="620" y="248" width="55" height="55" rx="8" fill="#ED7100"/></g>
+  <text x="647" y="280" text-anchor="middle" font-size="9" fill="white" font-weight="bold">VPC</text>
+  <text x="647" y="320" text-anchor="middle" font-size="10" fill="#232F3E">Staging</text>
+  <polyline points="490,275 620,275" stroke="#545B64" stroke-width="1.5" marker-end="url(#arw)" fill="none"/>
+
+  <g filter="url(#sh)"><rect x="620" y="410" width="55" height="55" rx="8" fill="#ED7100"/></g>
+  <text x="647" y="442" text-anchor="middle" font-size="9" fill="white" font-weight="bold">VPC</text>
+  <text x="647" y="482" text-anchor="middle" font-size="10" fill="#232F3E">Prod</text>
+  <polyline points="490,295 620,437" stroke="#545B64" stroke-width="1.5" marker-end="url(#arw)" fill="none"/>
+
+  <g filter="url(#sh)"><rect x="420" y="400" width="55" height="55" rx="8" fill="#3B48CC"/></g>
+  <text x="447" y="422" text-anchor="middle" font-size="6" fill="white" font-weight="bold">Route 53</text>
+  <text x="447" y="432" text-anchor="middle" font-size="6" fill="white" font-weight="bold">Resolver</text>
+  <text x="447" y="472" text-anchor="middle" font-size="10" fill="#232F3E">Split-horizon DNS</text>
+  <polyline points="297,303 447,400" stroke="#3B48CC" stroke-width="1.5" stroke-dasharray="4,2" fill="none"/>
+
+  <g filter="url(#sh)"><rect x="230" y="400" width="55" height="55" rx="8" fill="#DD344C"/></g>
+  <text x="257" y="424" text-anchor="middle" font-size="6" fill="white" font-weight="bold">Network</text>
+  <text x="257" y="434" text-anchor="middle" font-size="6" fill="white" font-weight="bold">Firewall</text>
+  <text x="257" y="472" text-anchor="middle" font-size="10" fill="#232F3E">Centralized inspection</text>
+
+  <rect x="30" y="500" width="1040" height="30" fill="#F2F3F3" stroke="#D5DBDB"/>
+  <rect x="42" y="508" width="12" height="12" fill="#ED7100"/><text x="58" y="518" font-size="9" fill="#232F3E">Compute/VPC</text>
+  <rect x="150" y="508" width="12" height="12" fill="#3B48CC"/><text x="166" y="518" font-size="9" fill="#232F3E">Database/DNS</text>
+  <rect x="260" y="508" width="12" height="12" fill="#DD344C"/><text x="276" y="518" font-size="9" fill="#232F3E">Security/Network</text>
+  <rect x="390" y="508" width="12" height="12" fill="#232F3E"/><text x="406" y="518" font-size="9" fill="#232F3E">Core Networking</text>
+  <text x="700" y="518" font-size="9" fill="#666">Transit Gateway shared cross-account via AWS RAM</text>
+</svg>

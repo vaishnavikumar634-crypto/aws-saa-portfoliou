@@ -1,0 +1,83 @@
+<svg viewBox="0 0 1100 560" xmlns="http://www.w3.org/2000/svg" font-family="Verdana, Arial, sans-serif">
+  <defs>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+    <marker id="arw" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L7,3.5 L0,7 Z" fill="#545B64"/>
+    </marker>
+  </defs>
+  <rect width="1100" height="560" fill="#ffffff"/>
+  <text x="30" y="34" font-size="18" font-weight="bold" fill="#232F3E">Serverless Image Processing Pipeline</text>
+  <line x1="30" y1="44" x2="1070" y2="44" stroke="#D5DBDB"/>
+
+  <!-- row 1 -->
+  <g filter="url(#sh)"><rect x="40" y="90" width="55" height="55" rx="8" fill="#545B64"/></g>
+  <text x="67" y="122" text-anchor="middle" font-size="9" fill="white" font-weight="bold">User</text>
+  <text x="67" y="162" text-anchor="middle" font-size="10" fill="#232F3E">Client</text>
+
+  <g filter="url(#sh)"><rect x="170" y="90" width="55" height="55" rx="8" fill="#7AA116"/></g>
+  <text x="197" y="115" text-anchor="middle" font-size="8" fill="white" font-weight="bold">API</text>
+  <text x="197" y="127" text-anchor="middle" font-size="8" fill="white" font-weight="bold">GW</text>
+  <text x="197" y="162" text-anchor="middle" font-size="10" fill="#232F3E">Pre-signed URL</text>
+
+  <g filter="url(#sh)"><rect x="320" y="90" width="55" height="55" rx="8" fill="#7AA116"/></g>
+  <text x="347" y="122" text-anchor="middle" font-size="8" fill="white" font-weight="bold">S3</text>
+  <text x="347" y="162" text-anchor="middle" font-size="10" fill="#232F3E">Source Bucket</text>
+
+  <g filter="url(#sh)"><rect x="470" y="90" width="55" height="55" rx="8" fill="#E7157B"/></g>
+  <text x="497" y="115" text-anchor="middle" font-size="8" fill="white" font-weight="bold">SQS</text>
+  <text x="497" y="127" text-anchor="middle" font-size="7" fill="white">+ DLQ</text>
+  <text x="497" y="162" text-anchor="middle" font-size="10" fill="#232F3E">Queue</text>
+
+  <g filter="url(#sh)"><rect x="620" y="90" width="55" height="55" rx="8" fill="#ED7100"/></g>
+  <text x="647" y="122" text-anchor="middle" font-size="9" fill="white" font-weight="bold">λ</text>
+  <text x="647" y="162" text-anchor="middle" font-size="10" fill="#232F3E">Lambda</text>
+
+  <polyline points="95,117 170,117" stroke="#545B64" stroke-width="1.5" marker-end="url(#arw)" fill="none"/>
+  <polyline points="225,117 320,117" stroke="#545B64" stroke-width="1.5" marker-end="url(#arw)" fill="none"/>
+  <polyline points="375,117 470,117" stroke="#545B64" stroke-width="1.5" marker-end="url(#arw)" fill="none"/>
+  <text x="420" y="107" text-anchor="middle" font-size="8" fill="#666">event</text>
+  <polyline points="525,117 620,117" stroke="#545B64" stroke-width="1.5" marker-end="url(#arw)" fill="none"/>
+
+  <!-- row 2 -->
+  <g filter="url(#sh)"><rect x="620" y="230" width="55" height="55" rx="8" fill="#7C3AED"/></g>
+  <text x="647" y="256" text-anchor="middle" font-size="7" fill="white" font-weight="bold">Step Fn</text>
+  <text x="647" y="302" text-anchor="middle" font-size="10" fill="#232F3E">resize→watermark</text>
+  <polyline points="647,145 647,230" stroke="#545B64" stroke-width="1.5" marker-end="url(#arw)" fill="none"/>
+
+  <g filter="url(#sh)"><rect x="470" y="230" width="55" height="55" rx="8" fill="#3B48CC"/></g>
+  <text x="497" y="256" text-anchor="middle" font-size="7" fill="white" font-weight="bold">Dynamo</text>
+  <text x="497" y="302" text-anchor="middle" font-size="10" fill="#232F3E">Metadata</text>
+  <polyline points="620,257 525,257" stroke="#545B64" stroke-width="1.5" marker-end="url(#arw)" fill="none"/>
+
+  <g filter="url(#sh)"><rect x="320" y="230" width="55" height="55" rx="8" fill="#7AA116"/></g>
+  <text x="347" y="256" text-anchor="middle" font-size="8" fill="white" font-weight="bold">S3</text>
+  <text x="347" y="302" text-anchor="middle" font-size="10" fill="#232F3E">Destination Bucket</text>
+  <polyline points="470,257 375,257" stroke="#545B64" stroke-width="1.5" marker-end="url(#arw)" fill="none"/>
+
+  <g filter="url(#sh)"><rect x="170" y="230" width="55" height="55" rx="8" fill="#E7157B"/></g>
+  <text x="197" y="256" text-anchor="middle" font-size="8" fill="white" font-weight="bold">SNS</text>
+  <text x="197" y="302" text-anchor="middle" font-size="10" fill="#232F3E">Notify</text>
+  <polyline points="320,257 225,257" stroke="#545B64" stroke-width="1.5" marker-end="url(#arw)" fill="none"/>
+
+  <!-- row 3 -->
+  <g filter="url(#sh)"><rect x="320" y="380" width="55" height="55" rx="8" fill="#8C4FFF"/></g>
+  <text x="347" y="410" text-anchor="middle" font-size="8" fill="white" font-weight="bold">CF</text>
+  <text x="347" y="452" text-anchor="middle" font-size="10" fill="#232F3E">CloudFront</text>
+  <polyline points="347,285 347,380" stroke="#545B64" stroke-width="1.5" marker-end="url(#arw)" fill="none"/>
+
+  <g filter="url(#sh)"><rect x="170" y="380" width="55" height="55" rx="8" fill="#545B64"/></g>
+  <text x="197" y="410" text-anchor="middle" font-size="8" fill="white" font-weight="bold">User</text>
+  <text x="197" y="452" text-anchor="middle" font-size="10" fill="#232F3E">Global Viewers</text>
+  <polyline points="320,407 225,407" stroke="#545B64" stroke-width="1.5" marker-end="url(#arw)" fill="none"/>
+
+  <!-- legend -->
+  <rect x="30" y="500" width="1040" height="30" fill="#F2F3F3" stroke="#D5DBDB"/>
+  <rect x="42" y="508" width="12" height="12" fill="#ED7100"/><text x="58" y="518" font-size="9" fill="#232F3E">Compute</text>
+  <rect x="130" y="508" width="12" height="12" fill="#7AA116"/><text x="146" y="518" font-size="9" fill="#232F3E">Storage</text>
+  <rect x="210" y="508" width="12" height="12" fill="#3B48CC"/><text x="226" y="518" font-size="9" fill="#232F3E">Database</text>
+  <rect x="300" y="508" width="12" height="12" fill="#E7157B"/><text x="316" y="518" font-size="9" fill="#232F3E">App Integration</text>
+  <rect x="420" y="508" width="12" height="12" fill="#8C4FFF"/><text x="436" y="518" font-size="9" fill="#232F3E">Networking/Edge</text>
+  <text x="700" y="518" font-size="9" fill="#666">Lambda Layers bundle Pillow/Sharp · SQS decouples ingestion for resilience</text>
+</svg>

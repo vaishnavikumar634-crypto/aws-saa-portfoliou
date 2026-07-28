@@ -1,0 +1,68 @@
+<svg viewBox="0 0 1100 520" xmlns="http://www.w3.org/2000/svg" font-family="Verdana, Arial, sans-serif">
+  <defs>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+    <marker id="arw" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L7,3.5 L0,7 Z" fill="#545B64"/>
+    </marker>
+  </defs>
+  <rect width="1100" height="520" fill="#ffffff"/>
+  <text x="30" y="34" font-size="18" font-weight="bold" fill="#232F3E">Serverless REST API — Cognito + DynamoDB + WAF</text>
+  <line x1="30" y1="44" x2="1070" y2="44" stroke="#D5DBDB"/>
+
+  <g filter="url(#sh)"><rect x="40" y="80" width="55" height="55" rx="8" fill="#545B64"/></g>
+  <text x="67" y="112" text-anchor="middle" font-size="8" fill="white" font-weight="bold">SPA</text>
+  <text x="67" y="152" text-anchor="middle" font-size="10" fill="#232F3E">Browser</text>
+
+  <g filter="url(#sh)"><rect x="180" y="80" width="55" height="55" rx="8" fill="#8C4FFF"/></g>
+  <text x="207" y="106" text-anchor="middle" font-size="7" fill="white" font-weight="bold">CF+S3</text>
+  <text x="207" y="152" text-anchor="middle" font-size="10" fill="#232F3E">Static Frontend</text>
+  <polyline points="95,107 180,107" stroke="#545B64" stroke-width="1.5" marker-end="url(#arw)" fill="none"/>
+
+  <g filter="url(#sh)"><rect x="40" y="220" width="55" height="55" rx="8" fill="#DD344C"/></g>
+  <text x="67" y="245" text-anchor="middle" font-size="7" fill="white" font-weight="bold">Cognito</text>
+  <text x="67" y="291" text-anchor="middle" font-size="10" fill="#232F3E">User Pool / JWT</text>
+  <polyline points="67,135 67,220" stroke="#545B64" stroke-width="1.5" marker-end="url(#arw)" fill="none"/>
+  <text x="72" y="180" font-size="8" fill="#666">auth</text>
+
+  <g filter="url(#sh)"><rect x="180" y="220" width="55" height="55" rx="8" fill="#DD344C"/></g>
+  <text x="207" y="252" text-anchor="middle" font-size="9" fill="white" font-weight="bold">WAF</text>
+  <text x="207" y="291" text-anchor="middle" font-size="10" fill="#232F3E">Rate-based rules</text>
+  <polyline points="67,247 180,247" stroke="#545B64" stroke-width="1.5" marker-end="url(#arw)" fill="none"/>
+
+  <g filter="url(#sh)"><rect x="330" y="220" width="55" height="55" rx="8" fill="#7AA116"/></g>
+  <text x="357" y="243" text-anchor="middle" font-size="7" fill="white" font-weight="bold">API</text>
+  <text x="357" y="253" text-anchor="middle" font-size="7" fill="white" font-weight="bold">GW</text>
+  <text x="357" y="291" text-anchor="middle" font-size="10" fill="#232F3E">Authorizer + cache</text>
+  <polyline points="235,247 330,247" stroke="#545B64" stroke-width="1.5" marker-end="url(#arw)" fill="none"/>
+
+  <g filter="url(#sh)"><rect x="480" y="220" width="55" height="55" rx="8" fill="#ED7100"/></g>
+  <text x="507" y="252" text-anchor="middle" font-size="9" fill="white" font-weight="bold">λ</text>
+  <text x="507" y="291" text-anchor="middle" font-size="10" fill="#232F3E">CRUD Handlers</text>
+  <polyline points="385,247 480,247" stroke="#545B64" stroke-width="1.5" marker-end="url(#arw)" fill="none"/>
+
+  <g filter="url(#sh)"><rect x="630" y="220" width="55" height="55" rx="8" fill="#3B48CC"/></g>
+  <text x="657" y="243" text-anchor="middle" font-size="7" fill="white" font-weight="bold">Dynamo</text>
+  <text x="657" y="253" text-anchor="middle" font-size="7" fill="white" font-weight="bold">DB</text>
+  <text x="657" y="291" text-anchor="middle" font-size="10" fill="#232F3E">Table + GSIs</text>
+  <polyline points="535,247 630,247" stroke="#545B64" stroke-width="1.5" marker-end="url(#arw)" fill="none"/>
+
+  <g filter="url(#sh)"><rect x="630" y="360" width="55" height="55" rx="8" fill="#3B48CC" opacity="0.6"/></g>
+  <text x="657" y="382" text-anchor="middle" font-size="7" fill="white" font-weight="bold">Streams</text>
+  <text x="657" y="431" text-anchor="middle" font-size="10" fill="#232F3E">Downstream events</text>
+  <polyline points="657,275 657,360" stroke="#545B64" stroke-width="1.5" marker-end="url(#arw)" fill="none"/>
+
+  <g filter="url(#sh)"><rect x="330" y="360" width="55" height="55" rx="8" fill="#7C3AED"/></g>
+  <text x="357" y="385" text-anchor="middle" font-size="7" fill="white" font-weight="bold">X-Ray</text>
+  <text x="357" y="431" text-anchor="middle" font-size="10" fill="#232F3E">Distributed tracing</text>
+  <polyline points="357,275 357,360" stroke="#7C3AED" stroke-width="1.5" stroke-dasharray="4,2" fill="none"/>
+
+  <rect x="30" y="465" width="1040" height="30" fill="#F2F3F3" stroke="#D5DBDB"/>
+  <rect x="42" y="473" width="12" height="12" fill="#ED7100"/><text x="58" y="483" font-size="9" fill="#232F3E">Compute</text>
+  <rect x="130" y="473" width="12" height="12" fill="#3B48CC"/><text x="146" y="483" font-size="9" fill="#232F3E">Database</text>
+  <rect x="220" y="473" width="12" height="12" fill="#DD344C"/><text x="236" y="483" font-size="9" fill="#232F3E">Security</text>
+  <rect x="310" y="473" width="12" height="12" fill="#7AA116"/><text x="326" y="483" font-size="9" fill="#232F3E">App Services</text>
+  <rect x="430" y="473" width="12" height="12" fill="#7C3AED"/><text x="446" y="483" font-size="9" fill="#232F3E">Developer Tools</text>
+  <text x="700" y="483" font-size="9" fill="#666">Cognito JWT verified by the API Gateway authorizer</text>
+</svg>
